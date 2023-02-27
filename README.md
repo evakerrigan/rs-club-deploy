@@ -22,6 +22,95 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Usage
+BASE URL = http://localhost:4000/api/
+- users
+  - Get users
+  - Get user
+  -
+- preferences
+
+---
+
+### GET USERS
+
+Returns json data about all users
+
+  <details open>
+<summary>Details: </summary>
+
+- URL:
+  - /users
+- Method:
+  - GET
+- Headers:
+  - None
+- URL Params
+  - None
+- Data Params
+  - None
+- Success Response:
+  - Code:
+    - 200 OK
+  - Content:
+
+```json
+[
+  {
+    "_id": "63e1174a1c82bd4ba79384d7",
+    "name": "Vasya",
+    "image": "https://uploads.dailydot.com/739/c4/1b455342801c3c08.png?q=65&w=2270&ar=2:1&fit=crop",
+    "role": "user",
+    "__v": 0
+  }
+]
+```
+
+</details>
+
+---
+
+### DELETE USER
+Returns json data that the operation was successful or an error if the ID is not validated.
+
+  <details open>
+<summary>Details: </summary>
+
+- URL:
+  - /users/:id
+- Method:
+  - DELETE
+- Headers:
+  - None
+- URL Params
+  - Required id
+- Data Params
+  - None
+- Success Response:
+  - Code:
+    - 200 OK
+  - Content:
+
+```json
+{
+    "acknowledged": true,
+    "deletedCount": 1
+}
+```
+- Error Response:
+  - Code:
+    - 500 Internal Server Error
+  - Content:
+```json
+{
+    "statusCode": 500,
+    "message": "Internal server error"
+}
+```
+</details>
+
+---
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -61,12 +150,6 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
