@@ -11,7 +11,7 @@ export class GithubStrategy extends PassportStrategy(Strategy, 'github') {
     super({
       clientID: configService.get<string>('GITHUB_CLIENT_ID'),
       clientSecret: configService.get<string>('GITHUB_CLIENT_SECRET'),
-      callbackURL: 'http://rs-club-deploy.vercel.app/api/auth/callback',
+      callbackURL: 'http://rs-club.vercel.app/api/auth/callback',
       scope: ['public_profile'],
     });
   }
